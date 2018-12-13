@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Forefathers</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<script src="script/external/bowser.js"></script><script src="script/checkBrowser.js"></script>
+		<div class="game">
+			<div class="command window">
+				<div class="main title">Forefathers</div>
+				<div class="echo"></div>
+				<div class="line" contenteditable="true"><br /></div> <!-- supposed to be clever ;) -->
+			</div>
+			<div class="inventory window">
+				<div class="title">Inventory</div>
+			</div>
+			<div class="settings window">
+				<div class="title">Settings</div><br />
+				<label for="charPerSec">Typing speed: </label><input type="range" min="1" max="100" value="10" id="charPerSec" /><br />
+				<label for="photoSensitiveEpilepsy">Disable flashing </label><input type="checkbox" id="photoSensitiveEpilepsy" />
+			</div>
+		</div>
+		<script src="script/util.js"></script>
+		<script src="script/type.js"></script>
+		<script src="script/settings.js"></script>
+		<script src="script/objects.js"></script>
+		<script defer src="script/game.js"></script>
+	</body>
+</html>
