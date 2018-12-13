@@ -17,6 +17,7 @@ async function completeLevel(won) {
 		setLevel(curLevel + 1);
 	}
 	else {
+		game.flashText("red");
 		h1.innerText = "Level failed!"
 		await appendEcho(undefined, h1);
 		await wait(4000);
@@ -165,7 +166,29 @@ document.querySelector(".game .command.window .line").addEventListener("keydown"
 
 var game = {
 	setBackground: function(url) {
-		document.querySelector(".game").styles.background = "url(" + url + ")";
+		document.querySelector(".game").style.background = "url(" + url + ")";
+	},
+	flashText: async function(color) {
+		if (photoSensitiveEpilepsy) return;
+		let gameElement = document.querySelector(".game");
+		gameElement.style.color = color;
+		await wait(100);
+		gameElement.style.color = "";
+		await wait(100);
+		gameElement.style.color = color;
+		await wait(100);
+		gameElement.style.color = "";
+		await wait(100);
+		gameElement.style.color = color;
+		await wait(100);
+		gameElement.style.color = "";
+		await wait(100);
+		gameElement.style.color = color;
+		await wait(100);
+		gameElement.style.color = "";
+		await wait(100);
+		gameElement.style.color = color;
+		await wait(100);
 	},
 	inventory: {
 		contents: new Map(),
