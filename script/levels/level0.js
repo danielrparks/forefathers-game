@@ -9,7 +9,7 @@ var level = {
 		intro[0].style = "display:block; text-align:right; width:100%;";
 		intro[0].innerHTML = "-->";
 		intro.push(document.createTextNode("This is your inventory. It functions as a list of all items that you have."));
-		intro.push(document.createTextNode("The objective of this game is to complete the mission with as much historical accuracy as possible. If you break history, you will have to restart the level."));
+		intro.push(document.createTextNode("The objective of this game is to complete the mission with as much historical accuracy as possible (with some exceptions). If you break history, you will have to restart the level."));
 		intro.push(document.createElement("span"));
 		intro[intro.length - 1].style = "display:block; text-align:right; width:100%;";
 		intro[intro.length - 1].innerHTML = "-->";
